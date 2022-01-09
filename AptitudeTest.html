@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="main.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <title>JMConsulting</title>
+  <style>
+    body {
+      background-color: #f1f5f8;
+      /* background-color: brown; */
+    }
+
+    .slidecontainer {
+      width: 100%;
+    }
+
+    .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 25px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+    }
+
+    .slider:hover {
+      opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      background: #04AA6D;
+      cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      background: #04AA6D;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a id="logo" class="navbar-brand" href="HomePage.html">J <span style="color: #65bd7d;">.</span> M <span
+          style="color: #65bd7d;">.</span> C <span style="color: #65bd7d;">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="HomePage.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AptitudeTest.html">Aptitude Test</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Classes.html">Classes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="AboutUs.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="userlogin.html">User Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Body -->
+
+  <!-- Form -->
+<form style="width:100%;" method="POST" action="assess.php">
+  <div class="container" id="Assessment-container">
+
+    <div class="shadow p-3 mb-5 bg-body rounded mt-5">
+      <div class="py-3">
+        <div class="mb-3">
+          <label for="exampleInputName" class="form-label">Name</label>
+          <input type="text" name="name" class="form-control" id="exampleInputName" aria-describedby="emailHelp"
+            placeholder="Enter your name">
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Body -->
+
+    <div class="card mb-5">
+      <div class="card-header">
+        <strong>Note</strong>
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>1 = Less favorable</p>
+          <p>9 = More favorable</p>
+        </blockquote>
+      </div>
+    </div>
+
+  </div>
+
+<!-- Content-Section -->
+
+<div class="Main-Section">
+
+<div class="container">
+    <div class="main-sec my-5 py-3">
+
+      <h4>Question 1</h4>
+      <p>How much do you enjoy using melee weapons?</p>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="9" value="1" name="q1" class="slider" id="q1Range">
+        <p>Value: <span id="q1Value"></span></p>
+      </div>
+
+      <h4>Question 2 </h4>
+      <p>Are you skilled in the arts of magic?</p>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="9" value="1" class="slider" name="q2" id="q2Range">
+        <p>Value: <span id="q2Value"></span></p>
+      </div>
+      
+      <h4>Question 3 </h4>
+      <p>Are you apt for a sneaky approach?</p>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="9" value="1" class="slider" name="q3" id="q3Range">
+        <p>Value: <span id="q3Value"></span></p>
+      </div>
+      
+      <h4>Question 4 </h4>
+      <p>Would you ever loot in the middle of combat?</p>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="9" value="1" class="slider" name="q4" id="q4Range">
+        <p>Value: <span id="q4Value"></span></p>
+      </div>
+
+      <h4>Question 5 </h4>
+      <p>Does a life of research interest you?</p>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="9" value="1" name="q5" class="slider" id="q5Range">
+        <p>Value: <span id="q5Value"></span></p>
+      </div>
+
+      <h4>Question 6 </h4>
+      <p>How important is the latest and greatest weaponry and armour?</p>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="9" value="1" name="q6" class="slider" id="q6Range">
+        <p>Value: <span id="q6Value"></span></p>
+      </div>
+
+      <h4>Question 7 </h4>
+      <p>'I would rather avoid combat.'</p>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="9" value="1" name="q7" class="slider" id="q7Range">
+        <p>Value: <span id="q7Value"></span></p>
+      </div>
+
+      <h4>Question 8 </h4>
+      <p>Do you prefer being front and center in combat?</p>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="9" value="1" name="q8" class="slider" id="q8Range">
+        <p>Value: <span id="q8Value"></span></p>
+      </div>
+
+      <h4>Question 9 </h4>
+      <p>'True strength comes from wisdom and knowledge.'</p>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="9" value="1" class="slider" name="q9" id="q9Range">
+        <p>Value: <span id="q9Value"></span></p>
+      </div>
+
+      <h4>Question 10 </h4>
+      <p>Do you fear what lurks in the shadows?</p>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="9" value="1" name="q10" class="slider" id="q10Range">
+        <p>Value: <span id="q10Value"></span></p>
+
+        <br>
+        <hr>
+
+        We sincerely hope this gives you insight into your ideal class. Our team at JMC look forward to
+        contacting you to see if we may assist you further on your quests. Q Namárie.
+        </p>
+
+      </div>
+
+      <!-- Button -->
+      <button type="submit" name="submit" class="btn btn-outline-secondary btn-lg w-100 border-3 my-5">Submit</button>
+
+
+    </div>
+  </div>
+</div>
+</form>
+
+
+  <!-- Footer -->
+  <footer class="border-top bg-dark py-3">
+    <div class="container px-4 px-lg-5 dark">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="{{templateParams['twitter']}}" target='_blank'>
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="{{templateParams['facebook']}}" target='_blank'>
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="{{templateParams['github']}}" target='_blank'>
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+
+          <div style="color: white;">
+            J.M. Consulting
+            <p><i>Bringing the adventure to you</i></p>
+
+            <h4>Managing Partners</h4>
+
+            <span style="display: block">James McPeek, 313-555-5555</span>
+            <span style="display: block">Frodo Baggins, 313-555-5555</span>
+            <span style="display: block">Gandalf White, 313-555-5555</span>
+          </div>
+
+          <div class="text-center text-white fst-italic mt-3">Copyright &copy 2021 | All rights reserved</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Java Script -->
+
+  <script>
+    var qslider1 = document.getElementById("q1Range");
+    var qoutput1 = document.getElementById("q1Value");
+    qoutput1.innerHTML = qslider1.value;
+    qslider1.oninput = function () {
+      qoutput1.innerHTML = this.value;
+    }
+
+    var qslider2 = document.getElementById("q2Range");
+    var qoutput2 = document.getElementById("q2Value");
+    qoutput2.innerHTML = qslider2.value;
+    qslider2.oninput = function () {
+      qoutput2.innerHTML = this.value;
+    }
+
+    var qslider3 = document.getElementById("q3Range");
+    var qoutput3 = document.getElementById("q3Value");
+    qoutput3.innerHTML = qslider3.value;
+    qslider3.oninput = function () {
+      qoutput3.innerHTML = this.value;
+    }
+
+    var qslider4 = document.getElementById("q4Range");
+    var qoutput4 = document.getElementById("q4Value");
+    qoutput4.innerHTML = qslider4.value;
+    qslider4.oninput = function () {
+      qoutput4.innerHTML = this.value;
+    }
+
+    var qslider5 = document.getElementById("q5Range");
+    var qoutput5 = document.getElementById("q5Value");
+    qoutput5.innerHTML = qslider5.value;
+    qslider5.oninput = function () {
+      qoutput5.innerHTML = this.value;
+    }
+
+    var qslider6 = document.getElementById("q6Range");
+    var qoutput6 = document.getElementById("q6Value");
+    qoutput6.innerHTML = qslider6.value;
+    qslider6.oninput = function () {
+      qoutput6.innerHTML = this.value;
+    }
+
+    var qslider7 = document.getElementById("q7Range");
+    var qoutput7 = document.getElementById("q7Value");
+    qoutput7.innerHTML = qslider7.value;
+    qslider7.oninput = function () {
+      qoutput7.innerHTML = this.value;
+    }
+
+    var qslider8 = document.getElementById("q8Range");
+    var qoutput8 = document.getElementById("q8Value");
+    qoutput8.innerHTML = qslider8.value;
+    qslider8.oninput = function () {
+      qoutput8.innerHTML = this.value;
+    }
+
+    var qslider9 = document.getElementById("q9Range");
+    var qoutput9 = document.getElementById("q9Value");
+    qoutput9.innerHTML = qslider9.value;
+    qslider9.oninput = function () {
+      qoutput9.innerHTML = this.value;
+    }
+
+    var qslider10 = document.getElementById("q10Range");
+    var qoutput10 = document.getElementById("q10Value");
+    qoutput10.innerHTML = qslider10.value;
+    qslider10.oninput = function () {
+      qoutput10.innerHTML = this.value;
+    }
+
+  </script>
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

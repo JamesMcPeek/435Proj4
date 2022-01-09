@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#register-container{
+  width: 50%;
+  max-width: 50%;
+}
+#register-statement {
+  margin-left: 43%;
+}
+
+#registration-form {
+  border: 3px solid #f1f1f1;
+  width: 100%;
+  padding: 1rem;
+}
+
+.row { 
+  font-weight: bold;
+  text-align: left;
+  width: 10rem;
+  /* padding: 0 1rem; */
+}
+
+.input-field {
+width: 30rem;
+border-radius: 50%;
+}
+
+input[type=text], input[type=password] {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 0.2rem;
+box-sizing: border-box;
+}
+#submit-row {
+  margin-top: 1rem;
+  width: 100%;
+  align-items: center;
+}
+#submit-button {
+background-color: #04AA6D;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+margin-left: 50%;
+border: none;
+border-radius: 0.5rem;
+cursor: pointer;
+width: 20rem;
+}
+
+#submit-button:hover {
+opacity: 0.8;
+}
+.container {
+padding: 16px;
+}
+
+#link-to-login {
+  margin-left: 40%;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  #registration-form {
+      border: 3px solid #f1f1f1;
+      width: 90%;
+      max-width: 90%;
+  }
+}
+
+.demo {
+border:1px solid #C0C0C0;
+border-collapse:collapse;
+padding:5px;
+}
+.demo th {
+border:1px solid #C0C0C0;
+padding:5px;
+background:#F0F0F0;
+}
+.demo td {
+border:1px solid #C0C0C0;
+padding:5px;
+}
+
+h3 {text-align: center;}
